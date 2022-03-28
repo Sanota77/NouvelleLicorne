@@ -11,53 +11,33 @@
      <link href="style.css" rel="stylesheet">
      <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
 
-    <title>Nouvelle Licorne</title>
+
+    <title>Licorne Team</title>
   </head>
   <body>
-    
     <!-- NAVBAR -->
     <?php
-      require 'navbar.php';
+        require 'navbar.php';
     ?>
     <!-- NAVBAR -->
+    <h2>Notre Team</h2>
 
-    <!-- Video -->
-    <div>
-      <video id="background-video" width="320" height="240" autoplay loop muted>
-        <source src="img/banvideo.mp4" type="video/mp4"/>
-      </video>
+    <!-- affichage de la team -->
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="./img/favicon.png" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">  
+                <h5 class="card-title">Nom et prenom</h5>
+                <p class="card-text">text prezz</p>
+            </div>
+        </div>
     </div>
-    <!-- Video -->
-    <div class="content">
 
-    <h1>Plus qu'une équipe</h1>
-    <h2>Une famille</h2>
-
-    <button id="btnVideo" onclick="playAndPause()">Pause II</button>
-
-    </div>
-    
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
-    <!-- owners script -->
-    <script>
-
-      var video = document.getElementById("background-video");
-      var btn = document.getElementById("btnVideo");
-
-      function playAndPause () {
-        if(video.paused) {
-        video.play();
-        btn.innerHTML = "Pause II";
-
-      }else {
-        video.pause();
-        btn.innerHTML = "Play ▶";
-        }
-
-      }
-    </script>
 
   </body>
 </html>
