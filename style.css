@@ -1,0 +1,9 @@
+ /* code couleur F495D4 */
+
+body{
+    background-color: #F495D4;
+    background-image:
+    linear-gradient(to bottom, #f495d4, rgba(255, 255, 255, 0.384)),
+    url('./img/back.png'); 
+    background-repeat: no-repeat;
+}
