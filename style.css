@@ -64,6 +64,7 @@ h1, h2, #btnVideo{
     width: 300px;
     height: 300px;
     perspective: 1000px;
+    display: inline-block;
 }
 
 .flip-card-inner {
@@ -89,12 +90,13 @@ h1, h2, #btnVideo{
 }
 
 .flip-card-front {
-    background-color: #bbb;
-    color: black;
+    background-color: #F495D4;
+    color: hsla(0, 0%, 0%, 0.9);
+    padding-top: 60px;
 }
 
 .flip-card-back {
-    background-color: #2980b9;
+    background-color: #F495D4;
     color: white;
     transform: rotateY(180deg);
 }
