@@ -28,7 +28,8 @@ Réalisation d'un site fictif pour le compte d'un dirigeant d'une association d'
 
     HTML 
     CSS
-    Bootstrap
     PHP
+    Bootstrap
     Trello
     Dia
+    GanttProject
