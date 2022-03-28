@@ -1,50 +1,44 @@
-<table class="table table-striped table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Evenements</th>
-      <th scope="col">Titre</th>
-      <th scope="col">Lieu</th>
-      <th scope="col">Date</th>
-      <th scope="col">Catégories</th>
-      <th scope="col">Matériel</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Lorem Elsass ipsum und DNA</th>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-    </tr>
+<?php
+try
+    {
+      $db = new PDO('mysql:host=localhost;dbname=nouvelle_licorne;charset=utf8', 'root', '');
+    }
+    catch (Exception $e)
+    {
+            die('Erreur : ' . $e->getMessage());
+    }
 
-    <tr>
-      <th scope="row">Lorem Elsass ipsum und DNA</th>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-    </tr>
+    $eventStat = $db->prepare('SELECT * FROM evenement');
+    $eventStat->execute();
+    $event = $eventStat->fetchAll();
 
-    <tr>
-      <th scope="row">Lorem Elsass ipsum und DNA</th>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-    </tr>
+    /* affichage de la team */
+    ?>
+    <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">nom</th>
+            <th scope="col">lieu</th>
+            <th scope="col">date</th>
+            <th scope="col">categorie</th>
+            <th scope="col">materiel</th>
+          </tr>
+        </thead>
+        <tbody>
+        <?php
+         foreach($event as $e){
+           ?>
+          <tr>
+            <td><?php echo $e['nom']; ?></td>
+            <td><?php echo $e['lieu']; ?></td>
+            <td><?php echo $e['date']; ?></td>
+            <td><?php echo $e['categorie']; ?></td>
+            <td><?php echo $e['materiel']; ?></td>
+          </tr> 
+        </tbody>
+      </table>
 
-    <tr>
-      <th scope="row">Lorem Elsass ipsum und DNA</th>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-      <td>Lorem Elsass ipsum und DNA</td>
-    </tr>
+    <?php
+    }
 
-  </tbody>
-</table>
+?>

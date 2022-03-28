@@ -22,19 +22,46 @@
     <!-- NAVBAR -->
     <h2>Notre Team</h2>
 
-    <!-- affichage de la team -->
+    <!-- code php -->
 
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img src="./img/favicon.png" alt="Avatar" style="width:300px;height:300px;">
-            </div>
-            <div class="flip-card-back">  
-                <h5 class="card-title">Nom et prenom</h5>
-                <p class="card-text">text prezz</p>
-            </div>
-        </div>
-    </div>
+    <?php
+
+    try
+    {
+      $db = new PDO('mysql:host=localhost;dbname=nouvelle_licorne;charset=utf8', 'root', '');
+    }
+    catch (Exception $e)
+    {
+            die('Erreur : ' . $e->getMessage());
+    }
+
+    $teamStat = $db->prepare('SELECT * FROM team');
+    $teamStat->execute();
+    $team = $teamStat->fetchAll();
+
+    /* affichage de la team */
+    foreach ($team as $team) {
+      ?>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h5 class="card-title"><?php echo $team['prenom']; ?> <?php echo $team['nom']; ?></h5>
+                <p class="card-text"><?php echo $team['text']; ?></p>
+              
+                  </div>
+              <div class="flip-card-back">  
+                <img src="<?php echo $team['pic']; ?>" alt="Avatar" style="width:300px;height:300px;">
+              </div>
+          </div>
+        </div>      
+      <?php
+      }
+
+    ?>
+
+
+
+    
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
