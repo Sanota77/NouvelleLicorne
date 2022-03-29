@@ -11,7 +11,7 @@
           <a class="nav-link active hovernav" aria-current="page" href="index.php">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link hovernav" href="./bénévoles.php">Nos bénévoles</a>
+          <a class="nav-link hovernav" href="./benevoles.php">Nos bénévoles</a>
         </li>
         <li class="nav-item">
           <a class="nav-link hovernav" href="./evenements.php">Nos événements</a>
