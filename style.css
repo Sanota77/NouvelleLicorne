@@ -74,7 +74,7 @@ h1, h2, #btnVideo{
     background-color: transparent;
     width: 300px;
     height: 300px;
-    margin-left: 60px;
+    margin-left: 7%;
     perspective: 1000px;
     display: inline-block;
 }
@@ -105,11 +105,13 @@ h1, h2, #btnVideo{
     background-color: #F495D4;
     color: hsla(0, 0%, 0%, 0.9);
     padding-top: 60px;
+    border-radius: 5px;
 }
 
 .flip-card-back {
     background-color: #F495D4;
     color: white;
     transform: rotateY(180deg);
+    border-radius: 5px;
 }
 

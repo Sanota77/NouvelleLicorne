@@ -12,10 +12,6 @@
     <title>Licorne Benevoles</title>
   </head>
   <body>
-    
-    <title>Licorne Benevoles</title>
-  </head>
-  <body>
     <!-- NAVBAR -->
     <?php
         require 'navbar.php';
@@ -56,10 +52,20 @@
         if($articles->rowCount() == 0) {
             $articles = $bdd->query('SELECT * FROM benevoles WHERE CONCAT(nom, ville) LIKE "%'.$q.'%" ORDER BY id DESC');
         }
+        /**on filtre les espace vide dans la bdd */
+        if($_GET['q'] == "je vous montre que le null est filtrable" ) {
+          $q = htmlspecialchars($_GET['q']);
+          $articles = $bdd->query('SELECT * FROM benevoles WHERE prenom IS null 
+          OR nom IS null 
+          OR date_naissance IS null 
+          OR adresse IS null 
+          OR ville IS null 
+          OR telephone IS null;  ');
+        }
       }
       ?>
     
-
+    <!-- en tete du tableau -->
     <div class="col-8">
       <table class="table table-striped table-hover">
         <thead>
@@ -73,7 +79,7 @@
           </tr>
         </thead>
         <tbody>
-    <!-- Traitement -->
+    <!-- Boucle et affichage -->
         <?php if($articles->rowCount() > 0) { ?>
           <?php while($a = $articles->fetch()) { ?>
               <tr>
@@ -91,7 +97,14 @@
     </table>
     </div>
 	<?php } else { ?>
-	Aucun résultat pour: <?= $q ?>...
+    <div class="card" style="width: 18rem;">
+      <img src="https://img.myloview.fr/posters/strong-angry-unicorn-mascot-flexing-its-arm-vector-clip-art-illustration-with-simple-gradients-all-on-a-single-layer-700-217715955.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Erreur !</h5>
+        <p class="card-text">⛔ Aucun résultat pour: <?= $q ?></p>
+        <a href="./benevoles.php" class="btn btn-danger">Retour</a>
+      </div>
+    </div>
 	<?php } ?>  
   <!-- div de droite reste vide pour centrer avec GRID -->
       <div class="col-md-2">
