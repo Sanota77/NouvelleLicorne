@@ -11,7 +11,7 @@
           <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./bénévoles.php">Nos bénévoles</a>
+          <a class="nav-link" href="./benevoles.php">Nos bénévoles</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./evenements.php">Nos événements</a>
@@ -20,10 +20,6 @@
           <a class="nav-link" href="./team.php">Notre team</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
   </div>
 </nav>
