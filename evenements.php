@@ -20,7 +20,7 @@
         require 'navbar.php';
     ?>
     <!-- NAVBAR -->
-    <h2>Nos evenements</h2>
+    <h2 style="margin-top: 50px;margin-bottom: 50px;">Nos Évènements</h2>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

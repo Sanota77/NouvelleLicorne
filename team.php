@@ -20,7 +20,7 @@
         require 'navbar.php';
     ?>
     <!-- NAVBAR -->
-    <h2>Notre Team</h2>
+    <h2 style="margin-top: 50px;margin-bottom: 50px;">Notre Team</h2>
 
     <!-- code php -->
 
@@ -44,13 +44,13 @@
       ?>
         <div class="flip-card">
           <div class="flip-card-inner">
-              <div class="flip-card-front">
+              <div class="flip-card-front" style="border-radius:5px;">
                 <h5 class="card-title"><?php echo $team['prenom']; ?> <?php echo $team['nom']; ?></h5>
                 <p class="card-text"><?php echo $team['text']; ?></p>
               
                   </div>
               <div class="flip-card-back">  
-                <img src="<?php echo $team['pic']; ?>" alt="Avatar" style="width:300px;height:300px;">
+                <img src="<?php echo $team['pic']; ?>" alt="Avatar" style="width:300px;height:300px;border-radius:5px;">
               </div>
           </div>
         </div>      
