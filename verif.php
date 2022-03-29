@@ -1,3 +1,16 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- owner  CSS -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <title>Licorne Benevoles</title>
+  </head>
 <?php
 $bdd = new PDO('mysql:host=localhost;dbname=nouvelle_licorne;charset=utf8','root','');
 	 
@@ -22,7 +35,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=nouvelle_licorne;charset=utf8','root
 	   <input type="search" name="q" placeholder="Recherche..." />
 	   <input type="submit" value="Valider" />
 	</form>
-
+   
     <div class="col-8">
 
     <table class="table table-striped table-hover">
@@ -57,3 +70,21 @@ $bdd = new PDO('mysql:host=localhost;dbname=nouvelle_licorne;charset=utf8','root
 	<?php } else { ?>
 	Aucun résultat pour: <?= $q ?>...
 	<?php } ?>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-2" style="background-color: red;">
+      Column gauche
+    </div>
+    <div class="col-4" style="text-align: center;">
+      Column milieu
+    </div>
+    <div class="col-4" style="text-align: center;">
+      Column milieu
+    </div>
+    <div class="col-2" style="background-color: red;">
+      Column bot
+    </div>
+  </div>
+</div>
