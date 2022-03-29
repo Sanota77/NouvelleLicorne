@@ -33,10 +33,10 @@ body{
 
 /* CSS VIDEO */
 #background-video{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     top: 0;
@@ -67,14 +67,7 @@ h1, h2, #btnVideo{
     margin-left: 50%;
     transform: translateX(-50%);
     }
-
-    /*.banhover{
-        background-color: rgba(235, 227, 227, 0.5) ;
-        width: 650px;
-        height: 380px;
-        border-radius: 8px;
-    }*/
-
+ 
 /* flip card TEAM */
 
 .flip-card {
@@ -119,3 +112,4 @@ h1, h2, #btnVideo{
     color: white;
     transform: rotateY(180deg);
 }
+

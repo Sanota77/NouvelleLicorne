@@ -19,6 +19,9 @@
         <li class="nav-item">
           <a class="nav-link hovernav" href="./team.php">Notre team</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link hovernav" href="./cinematique.php">Nos cinématiques</a>
+        </li>
       </ul>
     </div>
 </nav>
