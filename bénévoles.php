@@ -21,7 +21,7 @@
     ?>
     <!-- NAVBAR -->
 
-    <h2>Nos Benevoles</h2>
+    <h2 style="margin-top: 50px;margin-bottom: 50px;">Nos Bénévoles</h2>
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
