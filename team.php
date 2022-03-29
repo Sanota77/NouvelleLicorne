@@ -47,8 +47,7 @@
               <div class="flip-card-front" style="border-radius:5px;">
                 <h5 class="card-title"><?php echo $team['prenom']; ?> <?php echo $team['nom']; ?></h5>
                 <p class="card-text"><?php echo $team['text']; ?></p>
-              
-                  </div>
+              </div>
               <div class="flip-card-back">  
                 <img src="<?php echo $team['pic']; ?>" alt="Avatar" style="width:300px;height:300px;border-radius:5px;">
               </div>
