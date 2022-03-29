@@ -28,7 +28,7 @@
       </video>
     </div>
     <!-- Video -->
-    <div class="content">
+    <div class="content banhover" style="text-shadow: 5px 5px 5px #F495D4;">
 
     <h1>Plus qu'une équipe</h1>
     <h2>Une famille</h2>

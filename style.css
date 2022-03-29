@@ -8,6 +8,13 @@ body{
     background-repeat: no-repeat;
 }
 
+/* NavBar */
+
+.opacitynav{
+    background-color: #e8f1e8 !important;
+    opacity: 0.85;
+}
+
 .Logo{
     width: 100px;
     height: 100px;
@@ -18,6 +25,10 @@ body{
 
 .nav-link{
     margin: auto !important;
+}
+
+.hovernav:hover{
+    color:#F495D4 !important;
 }
 
 /* CSS VIDEO */
@@ -57,12 +68,20 @@ h1, h2, #btnVideo{
     transform: translateX(-50%);
     }
 
+    /*.banhover{
+        background-color: rgba(235, 227, 227, 0.5) ;
+        width: 650px;
+        height: 380px;
+        border-radius: 8px;
+    }*/
+
 /* flip card TEAM */
 
 .flip-card {
     background-color: transparent;
     width: 300px;
     height: 300px;
+    margin-left: 60px;
     perspective: 1000px;
     display: inline-block;
 }
