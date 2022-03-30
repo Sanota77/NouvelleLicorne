@@ -16,16 +16,11 @@
     <?php
         require 'navbar.php';
     ?>
-    
     <h2 style="margin-top: 50px;margin-bottom: 50px;">Nos Évènements</h2>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    <!-- Tableau: Nouvelle_Licorne -->
-  <div class="container">
-    <div class="row">
-      <div class="col"></div>
+  
   <!-- insertion tableau evenement -->
   <div class="container">
     <div class="row">
@@ -35,9 +30,7 @@
           <input class="form-control" type="search" name="q" placeholder="Recherche..." />
           <input class="form-control" type="submit" value="Valider" />
         </form>
-      </div>
-      <!-- div de gauche reste vide pour centrer avec GRID -->
-      
+      </div>    
       <!-- traitement search -->
       <?php
       $bdd = new PDO('mysql:host=localhost;dbname=nouvelle_licorne;charset=utf8','root','');
@@ -76,7 +69,6 @@
         }
       }
       ?>
-
     <div class="col-8">
       <table class="table table-striped table-hover">
         <thead>
