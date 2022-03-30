@@ -39,17 +39,28 @@
       $bdd = new PDO('mysql:host=localhost;dbname=nouvelle_licorne;charset=utf8','root','');
       /**requete bdd evenement futur strasbourg */
       $futur = $bdd->query('SELECT * FROM evenement WHERE lieu = "strasbourg" AND date > NOW()');
-      foreach($futur as $futur){
       ?>
-        <div>
-            <h5><?php echo $futur['lieu']; ?></h5>
-            <p><?php echo $futur['nom']; ?></p>
-            <p><?php echo $futur['date']; ?></p>
-        </div>    
+        <div class="col-8">
+            <table class="table table-striped">
+            <thead>
+                <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Lieu</th>
+                <th scope="col">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach($futur as $futur){?> 
+                <tr>  
+                <td><?php echo $futur['nom']; ?></td>
+                <td><?php echo $futur['lieu']; ?></td>
+                <td><?php echo $futur['date']; ?></td>
+                </tr>
       <?php
       }
-	
     ?>
+            </tbody>
+            </table>  
       </div>
       <div class="col">
 
