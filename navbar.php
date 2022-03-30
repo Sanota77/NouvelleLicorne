@@ -17,10 +17,11 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="./evenements.php">Tout les événements</a></li>
-            <li><a class="dropdown-item" href="#">Events futurs</a></li>
-            <li><a class="dropdown-item" href="#">Events futurs à Strasbourg</a></li>
+            <li><a class="dropdown-item" href="./lieu.php">Tout les lieux</a></li>
+            <li><a class="dropdown-item" href="./eventfutur.php">Events futurs</a></li>
+            <li><a class="dropdown-item" href="./eventfuturstrasbourg.php">Events futurs à Strasbourg</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Liste du matériels</a></li>
+            <li><a class="dropdown-item" href="./materiel.php">Liste du matériels</a></li>
           </ul>
         </li>
         <li class="nav-item">
