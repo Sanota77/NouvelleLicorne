@@ -39,24 +39,21 @@
       /**requete bdd materiel */
       $mat = $bdd->query('SELECT * FROM materiel');
       ?>
-
-    <div class="col-8">
-
+      <div class="col-8">
+        <ul class="list-group list-group-flush">
+          <?php
+            foreach($mat as $mat){
+            ?>
+              <li class="list-group-item"><?php echo $mat['materiel']; ?></li>
+            <?php
+            }
+          ?>
+        </ul>
       </div>
-      <div class="col"><?php
-      foreach($mat as $mat){
-        ?>
-          <div>
-              <h5><?php echo $mat['materiel']; ?></h5>
-          </div>    
-        <?php
-        }
-  
-        ?>
+      <div class="col">
+      <!-- doit rester vide -->
       </div>
     </div>
   </div>
-    
-    
   </body>
 </html>

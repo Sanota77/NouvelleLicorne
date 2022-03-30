@@ -30,30 +30,29 @@
   <div class="container">
     <div class="row">
       <div class="col-md-2">
-      </div>
       <!-- div de gauche reste vide pour centrer avec GRID -->
-      
-      <!-- traitement search -->
+      </div>
       <?php
-      $bdd = new PDO('mysql:host=localhost;dbname=nouvelle_licorne;charset=utf8','root','');
-       /**requete bdd lieu  */
-      $lieu = $bdd->query('SELECT distinct lieu FROM evenement ORDER BY id DESC');
-      foreach($lieu as $lieu){
+        $bdd = new PDO('mysql:host=localhost;dbname=nouvelle_licorne;charset=utf8','root','');
+        /**requete bdd lieu  */
+        $lieu = $bdd->query('SELECT distinct lieu FROM evenement ORDER BY id DESC');
       ?>
-        <div>
-            <h5><?php echo $lieu['lieu']; ?></h5>
-        </div>    
-      <?php
-      }
-      ?>
-
+      <!-- div du milieu avec contenu centré -->
+      <div class="col-8">
+        <ul class="list-group list-group-flush">
+        <?php
+          foreach($lieu as $lieu){
+        ?>
+          <li class="list-group-item"><?php echo $lieu['lieu']; ?></li>
+        <?php
+        }
+        ?>
+        </ul>
       </div>
       <div class="col">
-
+      <!-- div de droite reste vide pour centrer avec GRID -->
       </div>
     </div>
   </div>
-    
-    
   </body>
 </html>
