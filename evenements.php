@@ -41,36 +41,6 @@
       <!-- traitement search -->
       <?php
       $bdd = new PDO('mysql:host=localhost;dbname=nouvelle_licorne;charset=utf8','root','');
-      /**requete bdd materiel */
-      $mat = $bdd->query('SELECT * FROM materiel');
-      foreach($mat as $mat){
-      ?>
-        <div>
-            <h5><?php echo $mat['materiel']; ?></h5>
-        </div>    
-      <?php
-      }
-       /**requete bdd lieu  */
-      $lieu = $bdd->query('SELECT distinct lieu FROM evenement ORDER BY id DESC');
-      foreach($lieu as $lieu){
-      ?>
-        <div>
-            <h5><?php echo $lieu['lieu']; ?></h5>
-        </div>    
-      <?php
-      }
-      /**requete bdd evenement futur strasbourg */
-      $futur = $bdd->query('SELECT * FROM evenement WHERE lieu = "strasbourg" AND date > NOW()');
-      foreach($futur as $futur){
-      ?>
-        <div>
-            <h5><?php echo $futur['lieu']; ?></h5>
-            <p><?php echo $futur['nom']; ?></p>
-            <p><?php echo $futur['date']; ?></p>
-        </div>    
-      <?php
-      }
-	 
       $articles = $bdd->query('SELECT * FROM evenement ORDER BY id DESC');
       if(isset($_GET['q']) AND !empty($_GET['q'])) {
         $q = htmlspecialchars($_GET['q']);
