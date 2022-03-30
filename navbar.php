@@ -11,8 +11,17 @@
         <li class="nav-item">
           <a class="nav-link hovernav" href="./benevoles.php">Nos bénévoles</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link hovernav" href="./evenements.php">Nos événements</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle hovernav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Nos événements
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="./evenements.php">Tout les événements</a></li>
+            <li><a class="dropdown-item" href="#">Events futurs</a></li>
+            <li><a class="dropdown-item" href="#">Events futurs à Strasbourg</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Liste du matériels</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link hovernav" href="./team.php">Notre team</a>
