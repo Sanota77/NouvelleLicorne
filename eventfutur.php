@@ -17,7 +17,7 @@
         require 'navbar.php';
     ?>
     
-    <h2 style="margin-top: 50px;margin-bottom: 50px;">Nos Futurs événement</h2>
+    <h2 style="margin-top: 50px;margin-bottom: 50px;">Nos Futurs événements</h2>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -34,28 +34,38 @@
       <!-- div de gauche reste vide pour centrer avec GRID -->
       
          
-      <!-- traitement PDO -->
+      <!-- traitement search -->
       <?php
       $bdd = new PDO('mysql:host=localhost;dbname=nouvelle_licorne;charset=utf8','root','');
-      /**requete bdd evenement futur  */
+      /**requete bdd evenement futur strasbourg */
       $futur = $bdd->query('SELECT * FROM evenement WHERE date > NOW()');
-      foreach($futur as $futur){
       ?>
-        <div>
-            <h5><?php echo $futur['lieu']; ?></h5>
-            <p><?php echo $futur['nom']; ?></p>
-            <p><?php echo $futur['date']; ?></p>
-        </div>    
+        <div class="col-8">
+            <table class="table table-striped">
+            <thead>
+                <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Lieu</th>
+                <th scope="col">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach($futur as $futur){?> 
+                <tr>  
+                <td><?php echo $futur['nom']; ?></td>
+                <td><?php echo $futur['lieu']; ?></td>
+                <td><?php echo $futur['date']; ?></td>
+                </tr>
       <?php
       }
-	 ?>  
+    ?>
+            </tbody>
+            </table>  
       </div>
       <div class="col">
 
       </div>
     </div>
   </div>
-    
-    
   </body>
 </html>
